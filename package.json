@@ -1,0 +1,17 @@
+{
+  "name": "publisher",
+  "version": "1.0.0",
+  "description": "subscribe to rabbitMQ and publish to UI throw websockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "uri even ezra",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "socket.io": "^2.2.0"
+  }
+}
