@@ -17,8 +17,7 @@ router.get("/", (req, res) => {
 
 io.on("connection", socket => {
     console.log("New client connected")
-
-    console.log(socket.handshake.query['usr']);
+    const user = socket.handshake.query['usr']
     amqp.connect('amqp://localhost', function(error0, connection) {
         if (error0) {
             throw error0;
@@ -28,7 +27,7 @@ io.on("connection", socket => {
                 throw error1;
             }
 
-            var queue = 'hello'
+            var queue = user
 
             channel.assertQueue(queue, {
                 durable: false
